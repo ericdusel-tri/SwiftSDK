@@ -13,12 +13,12 @@ let package = Package(
             targets: ["SurrealInteractiveSDK"]),
     ],
     dependencies: [
-        .package(path: "xcframework"),
+        .package(url: "https://github.com/ericdusel-tri/SurrealOpenXRBinary.git", revision: ("c450bd8768668aa64b7472da76c777c1dba938fa")),
     ],
     targets: [
         .target(name: "SurrealInteractiveSDK",
                 dependencies:[
-                    .product(name:"openxr-framework", package:"xcframework")
+                    .product(name:"openxr-framework", package:"SurrealOpenXRBinary")
                 ],
                 cSettings: [],
                 linkerSettings:[
